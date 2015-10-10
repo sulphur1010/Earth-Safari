@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFCCAA">
+
+    <ImageView
+        android:id="@+id/nasa_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher"
+        android:adjustViewBounds="true" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_below="@+id/hint" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/hint" >
+            
+               <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/question" 
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio 1"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio 2" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio 3" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio 4" />
+    </RadioGroup>
+
+               <TextView
+                   android:id="@+id/question"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:text="Question"
+                   android:textSize="17sp" />
+            
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_weight="2"
+            android:background="#B04024"
+            android:text="Read"
+            android:drawableRight="@android:drawable/ic_btn_speak_now"
+            android:textColor="#FFFFFF"
+            android:onClick="clickSpeak" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_weight="2"
+            android:background="#B04024"
+            android:onClick="pressNext"
+            android:text="Next"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/showTime"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_weight="2"
+            android:background="#B04024"
+            android:text="Time 0:0"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+   
+
+    <Button
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@+id/nasa_image"
+        android:layout_alignParentLeft="true"
+        android:text="Hint"
+        android:onClick="clickHint"
+        android:background="@drawable/plusone_button"/>
+
+  
+</RelativeLayout>
